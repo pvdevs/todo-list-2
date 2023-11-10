@@ -1,0 +1,48 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif, 'inter';
+}
+
+#app {
+    height: 100vh;
+    background-color: red;
+}
+
+#content {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+}
+
+#nav {
+    height: 100%;
+    background-color: #F4F5F7;
+    border-right: 1px solid #D6D7D9;
+}
+
+#page-container {
+    height: 100%;
+    background-color: #FFFFFF;
+    padding: 72px 48px;
+}
+
+#page-header {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 24px;
+
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+.page-description {
+    color: #383A40;
+    padding: 0;
+    margin: 0;
+}
