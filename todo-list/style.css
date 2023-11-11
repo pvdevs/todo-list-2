@@ -98,6 +98,7 @@ body {
 .task-edit-container {
     margin: 24px 0px;
     border: solid 1px #D6D7D9;
+    border-radius: 4px;
 }
 
 .task-edit-top {
@@ -128,25 +129,41 @@ body {
 
 .task-edit-bottom-left {
     display: flex;
-    padding: 0 16px;
     gap: 16px;
 }
 
-.vertical-line {
-    height: 100%;
-    width: 1px;
-    background-color: #D6D7D9;
+.task-edit-date{
+    border: none;
+    outline-style: none;
+    appearance: none;
+    box-shadow: none;
+}
+
+.task-edit-date::-webkit-datetime-edit
+{
+    padding: 0 16px;
+}
+
+.task-edit-priority{
+    padding: 0 24px;
+    font-size: 14px;
+    border: none;
+    border-left: 1px solid #D6D7D9;
+    border-right: 1px solid #D6D7D9;
+    background-color: #fff;
+    outline: none;
+    appearance: none;
 }
 
 .task-edit-bottom-right{
     display: flex;
     gap: 8px;
-    padding: 16px;
+    padding: 8px 16px;
 }
 
 #task-edit-cancel-button{
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 8px 24px;
+    font-size: 14px;
     font-weight: 600;
     background-color: #E8E9EA;
     color: #383A40;
@@ -155,8 +172,8 @@ body {
 }
 
 #task-edit-save-button{
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 8px 24px;
+    font-size: 14px;
     font-weight: 600;
     background-color: #E71313;
     color: #FFFFFF;
