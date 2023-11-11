@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Todo List</title>
     <script type="module" src="./main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,40 @@
           <div id="page-header">
             <h1 class="page-title">Place Holder</h1>
             <p class="page-description">Lorem ipsum dolor sit amet consectetur. In morbi varius nunc turpis morbi ac facilisis bibendum sit. Viverra potenti justo vitae blandit consequat suscipit erat gravida scelerisque. Proin mauris vulputate sed ac euismod. Varius felis cursus praesent lacus. Sagittis fusce quis diam porttitor dolor arcu. </p>
+            <div class="separator-line"></div>
+          </div>
+          <div id="task-table">
+            <div class="task">
+              <div class="task-left-side">
+                <div class="task-title"> Buy SP404 MK2!</div>
+                <input type="date" class="task-date">
+              </div>
+              <div class="task-right-side">
+                <div class="task-priority">
+                  <p class="task-priority-text">High Priority!</p>
+                  <div class="task-priority-icon"></div>
+                </div>
+              </div>
+            </div>
+            <div class="task-edit-container">
+              <form class="task-edit-form">
+                <div class="task-edit-top">
+                  <input type="text" class="task-edit-title" placeholder="Placeholder">
+                  <textarea name="task-edit-description" class="task-edit-description" placeholder="Placeholder here too"></textarea>
+
+                </div>
+                <div class="task-edit-bottom">
+                  <div class="task-edit-bottom-left">
+                    <input type="date" class="task-date">
+                    <div class="vertical-line"></div>
+                  </div>
+                  <div class="task-edit-bottom-right">
+                    <button id="task-edit-cancel-button">Cancel</button>
+                    <button id="task-edit-save-button">Save</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

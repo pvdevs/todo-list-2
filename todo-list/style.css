@@ -4,6 +4,7 @@ body {
     font-family: sans-serif, 'inter';
 }
 
+/* -- General Content */
 #app {
     height: 100vh;
     background-color: red;
@@ -27,6 +28,8 @@ body {
     padding: 72px 48px;
 }
 
+/* -- Page or Project Containers */
+
 #page-header {
     display: grid;
     grid-template-rows: auto auto;
@@ -45,4 +48,118 @@ body {
     color: #383A40;
     padding: 0;
     margin: 0;
+}
+
+.separator-line {
+    background-color: #D6D7D9;
+    height: 1px;
+}
+
+/* -- Tasks Table Within Project Containers */
+
+/* Tasks */
+
+.task {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid #D6D7D9;
+}
+
+.task-left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-date {
+    color: green;
+    border: none;
+    font-size: 16px;
+}
+
+.task-priority {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.task-priority-icon {
+    height: 16px;
+    width: 16px;
+    border: 1px solid #D6D7D9;
+    border-radius: 100%;
+}
+
+/* Task Edit Section */
+
+.task-edit-container {
+    margin: 24px 0px;
+    border: solid 1px #D6D7D9;
+}
+
+.task-edit-top {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-edit-title {
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.task-edit-description {
+    border: none;
+    font-size: 12px;
+    width: 100%;
+    resize: vertical;
+}
+
+.task-edit-bottom {
+    border-top: 1px solid #D6D7D9;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-edit-bottom-left {
+    display: flex;
+    padding: 0 16px;
+    gap: 16px;
+}
+
+.vertical-line {
+    height: 100%;
+    width: 1px;
+    background-color: #D6D7D9;
+}
+
+.task-edit-bottom-right{
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+}
+
+#task-edit-cancel-button{
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #E8E9EA;
+    color: #383A40;
+    border: 1px solid #D6D7D9;
+    border-radius: 4px;
+}
+
+#task-edit-save-button{
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #E71313;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
 }
