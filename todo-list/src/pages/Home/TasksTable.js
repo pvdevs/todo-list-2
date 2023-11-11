@@ -1,0 +1,1 @@
+const tasksTable = document.getElementById('tasks-table');
