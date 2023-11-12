@@ -28,13 +28,13 @@ function removeAddNewTaskForm() {
 // Section Behavior
 
 // This function should be used when user click on add new task button
-export default function getAddNewTaskForm(){
+export function openAddNewTaskForm(){
     removeAddTaskButton();
     getAddNewTaskForm();
 }
 
 // This function should be used to reset the section, e.g: On form save or cancel button
-export default function resetAddNewTaskSection() {
+export function resetAddNewTaskSection() {
     removeAddNewTaskForm();
-    addTaskButton();
+    getAddTaskButton();
 }

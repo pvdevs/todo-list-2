@@ -1,3 +1,5 @@
+import {openAddNewTaskForm} from "../AddNewTaskSection";
+import {resetAddNewTaskSection} from "../AddNewTaskSection"
 
 document.addEventListener('click', documentEventListener);
 
@@ -10,16 +12,22 @@ function documentEventListener(e) {
 
 function addTaskButton(e) {
     e.preventDefault();
+
+    openAddNewTaskForm();
     console.log('edit');
 }
 
 
-function saveButton(e) {
+function saveButton(e) { // Should also create the task in the backend
     e.preventDefault();
+
+    resetAddNewTaskSection()
     console.log('save');
 }
 
 function cancelButton(e) {
     e.preventDefault();
+
+    resetAddNewTaskSection()
     console.log('cancel');
 }
