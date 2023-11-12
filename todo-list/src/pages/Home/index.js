@@ -1,6 +1,6 @@
-import newTaskForm from './AddNewTaskForm';
+import newTaskForm from '../../components/ui/TaskForm'
 import './events/FormHandler'
 
-//newTaskFormSection();
+newTaskForm();
 
 

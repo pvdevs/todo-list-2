@@ -1,28 +1,40 @@
-export default function createAddTaskButton() {
-    const addTaskSection = document.getElementById('add-task-section');
-    const addTaskButton = document.createElement('button');
-    addTaskButton.id = 'add-task-button';
-    addTaskButton.textContent = 'Add new task';
+import defaultTaskForm from "../../components/ui/TaskForm";
+import AddTaskButton from "../../components/ui/AddTaskButton";
 
-    addTaskSection.appendChild(addTaskButton);
+const addTaskSection = document.getElementById('add-task-section'); // May have to be inside of the funcionts;
+
+//  Functions
+
+// Add in section
+function getAddTaskButton() {
+    addTaskSection.appendChild(AddTaskButton());
 }
 
-/*
-function handleFormInputs() {
-    const formTitle = document.querySelector('.task-edit-title').textContent;
-    const formDescription = document.querySelector('.task-edit-description').textContent;
-    const formDate = document.querySelector('.task-edit-date').value;
-    const formPriority = document.querySelector('.task-edit-priority').value;
-
-    // Idk if this will be used
-    const formCancelBtn = document.getElementById('task-edit-cancel-button');
-    const formSaveBtn = document.getElementById('task-edit-save-button');
-    //
-
-    console.log(formTitle, formDescription, formDate, formPriority);
-
+function getAddNewTaskForm() {
+    addTaskSection.appendChild(defaultTaskForm());
 }
 
+// Remove from section
+function removeAddTaskButton(){
+    const addTaskButton = document.getElementById('add-task-button');
+    addTaskSection.removeChild(addTaskButton);
+}
 
-export default handleFormInputs
-*/
+function removeAddNewTaskForm() {
+    const addTaskContainer = document.querySelector('.task-edit-container');
+    addTaskSection.removeChild(addTaskContainer);
+}
+
+// Section Behavior
+
+// This function should be used when user click on add new task button
+export default function getAddNewTaskForm(){
+    removeAddTaskButton();
+    getAddNewTaskForm();
+}
+
+// This function should be used to reset the section, e.g: On form save or cancel button
+export default function resetAddNewTaskSection() {
+    removeAddNewTaskForm();
+    addTaskButton();
+}

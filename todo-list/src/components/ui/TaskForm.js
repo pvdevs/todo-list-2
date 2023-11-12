@@ -1,5 +1,4 @@
-export default function newTaskForm() {
-    const tasksTable = document.getElementById('tasks-table');
+export default function defaultTaskForm(taskCurrentTitle, taskCurrentDescription, taskCurrentDate, taskCurrentPriority) {
     const taskEditContainer = document.createElement('div');
     const taskEditForm = document.createElement('form');
     const taskEditTop = document.createElement('div');
@@ -38,16 +37,16 @@ export default function newTaskForm() {
     taskEditTitle.type = 'text';
     taskEditDate.type = 'date';
     
-    // Values
-    
-    taskEditPriorityOptionHigh.value = 'high';
-    taskEditPriorityOptionMid.value = 'mid';
-    taskEditPriorityOptionLow.value = 'low';
-    
     // Id's
     
     taskEditCancelButton.id = 'task-edit-cancel-button';
     taskEditSaveButton.id = 'task-edit-save-button';
+
+    // Values
+
+    taskEditPriorityOptionHigh.value = 'high';
+    taskEditPriorityOptionMid.value = 'mid';
+    taskEditPriorityOptionLow.value = 'low';
     
     // Placeholders
     
@@ -59,6 +58,8 @@ export default function newTaskForm() {
     taskEditPriorityOptionHigh.textContent = 'High';
     taskEditPriorityOptionMid.textContent = 'Mid';
     taskEditPriorityOptionLow.textContent = 'Low';
+
+    // Buttons
     
     taskEditCancelButton.textContent = 'Cancel';
     taskEditSaveButton.textContent = 'Save';
@@ -79,5 +80,5 @@ export default function newTaskForm() {
     
     taskEditContainer.appendChild(taskEditForm);
 
-    tasksTable.appendChild(taskEditContainer);
+    return taskEditContainer;
 }
