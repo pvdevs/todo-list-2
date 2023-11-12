@@ -1,3 +1,6 @@
-import newTaskFormSection from './NewTaskFormSection';
+import newTaskForm from './AddNewTaskForm';
+import './events/FormHandler'
 
-newTaskFormSection();
+//newTaskFormSection();
+
+

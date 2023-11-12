@@ -95,6 +95,16 @@ body {
 
 /* Task Edit Section */
 
+#add-task-button{
+    margin-top: 24px;
+    font-size: 16px;
+    color: #17181b;
+    padding: 12px 16px;
+    background-color: #FFFFFF;
+    border: 1px solid #E71313;
+    border-radius: 4px;
+}
+
 .task-edit-container {
     margin: 24px 0px;
     border: solid 1px #D6D7D9;

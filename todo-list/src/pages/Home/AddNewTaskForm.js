@@ -1,4 +1,4 @@
-export default function newTaskFormSection() {
+export default function newTaskForm() {
     const tasksTable = document.getElementById('tasks-table');
     const taskEditContainer = document.createElement('div');
     const taskEditForm = document.createElement('form');
