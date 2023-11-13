@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -59,25 +64,31 @@ body {
 
 /* Tasks */
 
-.task {
+.task-container {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
     padding: 24px 0;
     border-bottom: 1px solid #D6D7D9;
+    gap: 24px;
 }
 
 .task-left-side {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 }
 
 .task-date {
     color: green;
     border: none;
     font-size: 16px;
+    width:min-content;
+}
+
+.task-description {
+    color: #808080;
 }
 
 .task-priority {
@@ -93,6 +104,20 @@ body {
     border-radius: 100%;
 }
 
+.high-priority-icon {
+    border: 1px solid #E71313;
+    background-color: #F4DFDF;
+}
+
+.mid-priority-icon {
+    border: 1px solid #F5D215;
+    background-color: #FEF8DC;
+}
+
+.low-priority-icon {
+    border: 1px solid #319B46;
+    background-color: #EBF5ED;
+}
 /* Task Edit Section */
 
 #add-task-button{
