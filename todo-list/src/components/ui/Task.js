@@ -2,6 +2,8 @@
 export default function getTaskDisplay(title, description, date, priority) {
     const taskContainer = document.createElement('div');
     const taskLeftSide = document.createElement('div');
+    const taskLeftSideInfo = document.createElement('div');
+    const taskDoneButton = document.createElement('div');
     const taskTitle = document.createElement('p');
     const taskDescription = document.createElement('p');
     const taskDate = document.createElement('input');
@@ -11,6 +13,8 @@ export default function getTaskDisplay(title, description, date, priority) {
     // Classes
     taskContainer.classList.add('task-container');
     taskLeftSide.classList.add('task-left-side');
+    taskLeftSideInfo.classList.add('task-left-side-info');
+    taskDoneButton.classList.add('task-done-button');
     taskTitle.classList.add('task-title');
     taskDescription.classList.add('task-description');
     taskDate.classList.add('task-date');
@@ -25,7 +29,10 @@ export default function getTaskDisplay(title, description, date, priority) {
     taskDate.value = date;
 
     // Appends
-    taskLeftSide.append(taskTitle, taskDescription, taskDate);
+    
+    taskLeftSideInfo.append(taskTitle, taskDescription, taskDate);
+
+    taskLeftSide.append(taskDoneButton, taskLeftSideInfo);
     
     taskRightSide.appendChild(taskPriority);
 
