@@ -58,7 +58,7 @@ function taskPriorityHigh(){
     taskPriorityText.classList.add('task-priority-text');
     taskPriorityIcon.classList.add('task-priority-icon');
 
-    taskPriorityText.textContent = 'High';
+    taskPriorityText.textContent = 'High Priority';
     taskPriorityIcon.classList.add('high-priority-icon');
 
     taskPriority.append(taskPriorityText, taskPriorityIcon);
@@ -74,8 +74,8 @@ function taskPriorityMid(){
     taskPriorityText.classList.add('task-priority-text');
     taskPriorityIcon.classList.add('task-priority-icon');
 
-    taskPriorityText.textContent = 'High';
-    taskPriorityIcon.classList.add('high-priority-icon');
+    taskPriorityText.textContent = 'Mid Priority';
+    taskPriorityIcon.classList.add('mid-priority-icon');
 
     taskPriority.append(taskPriorityText, taskPriorityIcon);
 
@@ -90,8 +90,8 @@ function taskPriorityLow(){
     taskPriorityText.classList.add('task-priority-text');
     taskPriorityIcon.classList.add('task-priority-icon');
 
-    taskPriorityText.textContent = 'High';
-    taskPriorityIcon.classList.add('high-priority-icon');
+    taskPriorityText.textContent = 'Low Priority';
+    taskPriorityIcon.classList.add('low-priority-icon');
 
     taskPriority.append(taskPriorityText, taskPriorityIcon);
     
