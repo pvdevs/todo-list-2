@@ -1,5 +1,5 @@
 
-export default function getTaskDisplay(title, description, date, priority) {
+export default function getTaskDisplay(id, title, description, date, priority) {
     const taskContainer = document.createElement('div');
     const taskLeftSide = document.createElement('div');
     const taskLeftSideInfo = document.createElement('div');
@@ -20,6 +20,9 @@ export default function getTaskDisplay(title, description, date, priority) {
     taskDate.classList.add('task-date');
     taskRightSide.classList.add('task-right-side');
     
+    // Assing Id
+    taskContainer.dataset.id = id;
+
     // Inputs
     taskDate.type = 'date';
     

@@ -6,8 +6,10 @@ import { tasks } from "../../data/Tasks";
 
 export default function addNewTask(title, description, date, priority) {
 
-    storeNewTask(title, description, date, priority);
-    addNewTaskToTable(title, description, date, priority);
+    const task = new Task(title, description, date, priority);
+
+    storeNewTask(task);
+    addNewTaskToTable(task);
 
     console.log(tasks);
 }

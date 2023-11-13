@@ -2,9 +2,9 @@ import getTaskDisplay from "../../components/ui/Task";
 
 const tasksContainer = document.getElementById('tasks');
 
-export function addNewTaskToTable(title, description, date, priority) {
-    //console.log(title);
-    const task = getTaskDisplay(title, description, date, priority);
+export function addNewTaskToTable(task) {
+    
+    const newTask = getTaskDisplay(task.id, task.title, task.description, task.date, task.priority);
 
-    tasksContainer.appendChild(task);
+    tasksContainer.appendChild(newTask);
 }
