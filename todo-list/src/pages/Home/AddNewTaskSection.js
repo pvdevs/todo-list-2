@@ -1,4 +1,4 @@
-import defaultTaskForm from "../../components/ui/TaskForm";
+import { defaultTaskForm } from "../../components/ui/TaskForm";
 import AddTaskButton from "../../components/ui/AddTaskButton";
 
 const addTaskSection = document.getElementById('add-task-section'); // May have to be inside of the funcionts;

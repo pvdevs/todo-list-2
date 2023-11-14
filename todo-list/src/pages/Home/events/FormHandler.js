@@ -14,13 +14,7 @@ function documentEventListener(e) {
     if(e.target.id === 'add-task-button') addTaskButton(e);
     if(e.target.id === 'task-edit-save-button') saveButton(e);
     if(e.target.id === 'task-edit-cancel-button') cancelButton(e)
-    if(e.target.closest('.task-left-side-info')){ 
-        
-    }
-}
 
-function editTaks() {
-    openForm
 }
 
 function addTaskButton(e) {

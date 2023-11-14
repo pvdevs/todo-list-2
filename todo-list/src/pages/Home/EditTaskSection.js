@@ -1,10 +1,11 @@
-import defaultTaskForm from "../../components/ui/TaskForm";
+import { defaultTaskForm, filledTaskForm } from "../../components/ui/TaskForm";
 import { displayEditedTask, displayTask } from "../../components/ui/Task";
 import findTask from "../../data/FindTask";
 
 // Get task
 export function getTaskContainer(id) {
-    const task = document.querySelector(`data-id = ${id}`);
+    const task = document.querySelector(`[data-id='${id}']`);
+    console.log(task);
     return task
 }
 
@@ -15,7 +16,9 @@ export function clearTaskSection(id){
 
 // Append task form on task section
 export function getTaskForm(id) {
-    getTaskContainer(id).appendChild(defaultTaskForm());
+    const task = findTask(id);
+
+    getTaskContainer(id).appendChild(filledTaskForm(task));
 }
 
 // Append task on container
@@ -25,6 +28,7 @@ export function appendTask(id) {
 
 export function updateTaskDisplay(id) {
     const task = findTask(id);
+    
     displayEditedTask(task.id, task.title, task.description, task.id, task.priority);
 }
 

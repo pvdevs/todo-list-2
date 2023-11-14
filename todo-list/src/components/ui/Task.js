@@ -47,7 +47,7 @@ export function displayNewTask(id, title, description, date, priority) {
     taskContainer.classList.add('task-container');
     taskContainer.dataset.id = id;
 
-    const task = displayTask(id, title, description, date, priority);
+    const task = displayTask(title, description, date, priority);
 
     taskContainer.appendChild(task);
 
