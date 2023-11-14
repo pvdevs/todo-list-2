@@ -1,6 +1,5 @@
-
-export default function getTaskDisplay(id, title, description, date, priority) {
-    const taskContainer = document.createElement('div');
+export function displayTask(title, description, date, priority) {
+    const task = document.createElement('div');
     const taskLeftSide = document.createElement('div');
     const taskLeftSideInfo = document.createElement('div');
     const taskDoneButton = document.createElement('div');
@@ -11,7 +10,7 @@ export default function getTaskDisplay(id, title, description, date, priority) {
     const taskPriority = getTaskPriority(priority);
 
     // Classes
-    taskContainer.classList.add('task-container');
+    task.classList.add('task');
     taskLeftSide.classList.add('task-left-side');
     taskLeftSideInfo.classList.add('task-left-side-info');
     taskDoneButton.classList.add('task-done-button');
@@ -19,9 +18,6 @@ export default function getTaskDisplay(id, title, description, date, priority) {
     taskDescription.classList.add('task-description');
     taskDate.classList.add('task-date');
     taskRightSide.classList.add('task-right-side');
-    
-    // Assing Id
-    taskContainer.dataset.id = id;
 
     // Inputs
     taskDate.type = 'date';
@@ -39,9 +35,31 @@ export default function getTaskDisplay(id, title, description, date, priority) {
     
     taskRightSide.appendChild(taskPriority);
 
-    taskContainer.append(taskLeftSide, taskRightSide);
+    task.append(taskLeftSide, taskRightSide);
+
+    return task;
+}
+
+export function displayNewTask(id, title, description, date, priority) {
+    
+    const taskContainer = document.createElement('div');
+
+    taskContainer.classList.add('task-container');
+    taskContainer.dataset.id = id;
+
+    const task = displayTask(id, title, description, date, priority);
+
+    taskContainer.appendChild(task);
 
     return taskContainer;
+}
+
+export function displayEditedTask(id, title, description, date, priority){
+    const taskContainer = document.querySelector(`data-id = ${id}`);
+
+    const task = displayTask(title, description, date, priority);
+
+    taskContainer.appendChild(task);
 }
 
 function getTaskPriority(priority) {

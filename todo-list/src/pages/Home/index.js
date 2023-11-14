@@ -1,6 +1,7 @@
 import newTaskForm from '../../components/ui/TaskForm';
 import addTask from '../../data/StoreNewTask';
 import './events/FormHandler';
+import './EditTaskSection';
 
 newTaskForm();
 

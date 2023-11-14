@@ -14,7 +14,6 @@ export default function defaultTaskForm(taskCurrentTitle, taskCurrentDescription
     const taskEditBottomRight = document.createElement('div');
     const taskEditCancelButton = document.createElement('button');
     const taskEditSaveButton = document.createElement('button');
-    
 
     // Classes
 
