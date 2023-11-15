@@ -30,6 +30,7 @@ export function clearTaskSection(id){
 export function updateTaskDisplay(id) {
     const task = findTask(id);
     
+    clearTaskSection(id);
     displayEditedTask(task.id, task.title, task.description, task.id, task.priority);
 }
 
@@ -43,6 +44,7 @@ export function openForm(id) {
 export function cancelForm(id) {
     const task = findTask(id);
 
+    clearTaskSection(id);
     displayEditedTask(task.id, task.title, task.description, task.id, task.priority);
 }
 
