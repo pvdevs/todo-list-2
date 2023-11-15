@@ -163,7 +163,6 @@ export function filledTaskForm(task) {
     
     taskEditContainer.appendChild(taskEditForm);
 
-
     // Values
 
     taskEditTitle.value = task.title;

@@ -1,5 +1,5 @@
-import { defaultTaskForm } from "../../components/ui/TaskForm";
-import AddTaskButton from "../../components/ui/AddTaskButton";
+import { defaultTaskForm } from "../../../components/ui/TaskForm";
+import AddTaskButton from "../../../components/ui/AddTaskButton";
 
 const addTaskSection = document.getElementById('add-task-section'); // May have to be inside of the funcionts;
 
@@ -28,7 +28,7 @@ function removeAddNewTaskForm() {
 // Section Behavior
 
 // This function should be used when user click on add new task button
-export function openAddNewTaskForm(){
+export function openAddNewTaskForm(){   
     removeAddTaskButton();
     getAddNewTaskForm();
 }

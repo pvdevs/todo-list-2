@@ -1,9 +1,10 @@
-import {openAddNewTaskForm} from "../AddNewTaskSection";
-import {resetAddNewTaskSection} from "../AddNewTaskSection"
-import { getFormTitleValue, getFormDescriptionValue, getFormDateValue, getFormPriorityValue } from "../../../components/form/GetFormValues";
-import addTask from "../../../data/StoreNewTask";
-import addNewTask from "../AddNewTask";
-import { openForm } from "../EditTaskSection";
+import {openAddNewTaskForm} from "../../addTasks/AddNewTaskSection";
+import {resetAddNewTaskSection} from "../../addTasks/AddNewTaskSection"
+import { getFormTitleValue, getFormDescriptionValue, getFormDateValue, getFormPriorityValue } from "../../../../components/form/GetFormValues";
+import addTask from "../../../../data/StoreNewTask";
+import addNewTask from "../../addTasks/AddNewTask";
+import { openForm, updateTaskDisplay } from "../EditTaskSection";
+import getUpdateTask from "../EditTask";
 
 
 document.addEventListener('click', documentEventListener);
@@ -11,12 +12,8 @@ document.addEventListener('click', documentEventListener);
 function documentEventListener(e) {
 
 
-    if(e.target.closest('.task-left-side-info')){ 
-        editTaks(e);
-                 
-    }
-    //if(e.target.id === 'task-edit-save-button') saveButton(e);
-    //if(e.target.id === 'task-edit-cancel-button') cancelButton(e)
+    if(e.target.closest('.task-left-side-info')) editTaks(e);
+
 }
 
 function findTargetId(e) {
@@ -26,7 +23,7 @@ function findTargetId(e) {
     return id;
 }
 
-function editTaks(e) {
+export function editTaks(e) {
     const id = findTargetId(e);
 
     // Check if there is a form open alredy and close it if its the case
@@ -46,7 +43,7 @@ function editTaks(e) {
 function saveButtonEvent(e) { // Should also create the task in the backend
     e.preventDefault();
     
-    resetAddNewTaskSection()
+    getUpdateTask(findTargetId(e));
     console.log('save');
 }
 

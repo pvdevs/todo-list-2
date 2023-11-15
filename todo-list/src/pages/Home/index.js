@@ -1,12 +1,10 @@
 
 import addTask from '../../data/StoreNewTask';
-import './events/FormHandler';
-import './events/EditTaskEvent'
-import './EditTaskSection';
+import './PageEvent'
+import { openAddNewTaskForm } from './addTasks/AddNewTaskSection';
 
-newTaskForm();
+
+//newTaskForm();
 
 
 //const teste = new Task('t','d','date','pri');
-
-

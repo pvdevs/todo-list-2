@@ -1,6 +1,6 @@
-import { defaultTaskForm, filledTaskForm } from "../../components/ui/TaskForm";
-import { displayEditedTask, displayTask } from "../../components/ui/Task";
-import findTask from "../../data/FindTask";
+import { defaultTaskForm, filledTaskForm } from "../../../components/ui/TaskForm";
+import { displayEditedTask, displayTask } from "../../../components/ui/Task";
+import findTask from "../../../data/FindTask";
 
 // Get task
 export function getTaskContainer(id) {
