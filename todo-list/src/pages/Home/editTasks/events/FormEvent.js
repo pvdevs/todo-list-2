@@ -46,10 +46,3 @@ function saveButtonEvent(e) { // Should also create the task in the backend
     getUpdateTask(findTargetId(e));
     console.log('save');
 }
-
-function cancelButtonEvent(e) {
-    e.preventDefault();
-
-    //resetAddNewTaskSection()
-    console.log('cancel');
-}

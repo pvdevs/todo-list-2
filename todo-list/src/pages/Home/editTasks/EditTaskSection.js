@@ -2,16 +2,13 @@ import { defaultTaskForm, filledTaskForm } from "../../../components/ui/TaskForm
 import { displayEditedTask, displayTask } from "../../../components/ui/Task";
 import findTask from "../../../data/FindTask";
 
+// Functions
+
 // Get task
 export function getTaskContainer(id) {
     const task = document.querySelector(`[data-id='${id}']`);
     console.log(task);
-    return task
-}
-
-// Remove and clear task section from all elements
-export function clearTaskSection(id){
-    getTaskContainer(id).replaceChildren();
+    return task;
 }
 
 // Append task form on task section
@@ -21,10 +18,14 @@ export function getTaskForm(id) {
     getTaskContainer(id).appendChild(filledTaskForm(task));
 }
 
-// Append task on container
-export function appendTask(id) { 
-    //displayTask()
+// Clear Section
+export function clearTaskSection(id){
+    getTaskContainer(id).replaceChildren();
 }
+
+
+
+// Append task on container
 
 export function updateTaskDisplay(id) {
     const task = findTask(id);
@@ -37,4 +38,17 @@ export function updateTaskDisplay(id) {
 export function openForm(id) {
     clearTaskSection(id);
     getTaskForm(id);
+}
+
+export function cancelForm(id) {
+    const task = findTask(id);
+
+    displayEditedTask(task.id, task.title, task.description, task.id, task.priority);
+}
+
+// getTaskInfo
+
+export function getTask(id) {
+    const task = findTask(id);
+    
 }
