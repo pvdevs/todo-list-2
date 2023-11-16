@@ -5,7 +5,7 @@ export default function updateTask(id, newTitle, newDescription, newDate, newPri
     const task = findTask(id);
     
     task.title = newTitle;
-    task.newDescription = newDescription;
+    task.description = newDescription;
     task.date = newDate;
     task.priority = newPriority;
 }

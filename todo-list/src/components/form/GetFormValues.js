@@ -4,8 +4,8 @@ export function getFormTitleValue() {
 }
 
 export function getFormDescriptionValue() {
-    const taskTitleForm = document.querySelector('.task-edit-description');
-    return taskTitleForm.value;
+    const taskDescriptionForm = document.querySelector('.task-edit-description');
+    return taskDescriptionForm.value;
 }
 
 export function getFormDateValue() {

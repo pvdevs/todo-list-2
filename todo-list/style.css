@@ -39,6 +39,7 @@ body {
     display: grid;
     grid-template-rows: auto auto;
     gap: 24px;
+    margin-bottom: 24px;
 
 }
 
@@ -70,7 +71,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 24px 0;
+    border-top: 1px solid #D6D7D9;
     border-bottom: 1px solid #D6D7D9;
+    margin-top: -1px;
     gap: 40px;
 }
 
@@ -135,6 +138,11 @@ body {
     background-color: #EBF5ED;
 }
 /* Task Edit Section */
+
+#add-task-section{
+    border-top: 1px solid #D6D7D9;
+    margin-top: -1px;
+}
 
 #add-task-button{
     margin-top: 24px;
