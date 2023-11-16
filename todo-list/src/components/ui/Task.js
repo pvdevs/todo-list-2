@@ -55,7 +55,7 @@ export function displayNewTask(id, title, description, date, priority) {
 }
 
 export function displayEditedTask(id, title, description, date, priority){
-    const taskContainer = document.querySelector(`[data-id = ${id}]`);
+    const taskContainer = document.querySelector(`[data-id=${id}]`);
 
     const task = displayTask(title, description, date, priority);
 
