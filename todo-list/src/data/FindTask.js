@@ -1,6 +1,3 @@
-import { tasks } from "./Tasks";
-
-
 export default function findTask(id) {
     //return tasks.find( task => task.id === id);
     const task = localStorage.getItem(`task: ${id}`);
