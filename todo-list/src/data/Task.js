@@ -6,7 +6,7 @@ export default class Task {
         this.description = description;
         this.date = date;
         this.priority = priority;
-        this.id = uuidv4();
+        this.taskId = uuidv4();
         // project must be here too;
     }
 
