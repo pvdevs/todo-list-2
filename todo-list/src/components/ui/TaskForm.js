@@ -62,7 +62,7 @@ export function defaultTaskForm(taskCurrentTitle, taskCurrentDescription, taskCu
     
     taskEditCancelButton.textContent = 'Cancel';
     taskEditSaveButton.textContent = 'Save';
-    
+
     // Appends
     
     taskEditTop.append(taskEditTitle, taskEditDescription);
