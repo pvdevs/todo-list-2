@@ -2,14 +2,15 @@ import { v4 as uuidv4 } from "uuid";
 
 export default class Task {
     constructor(title, description, date, priority){
-        this._title = title;
-        this._description = description;
-        this._date = date;
-        this._priority = priority;
-        this._id = uuidv4();
+        this.title = title;
+        this.description = description;
+        this.date = date;
+        this.priority = priority;
+        this.id = uuidv4();
         // project must be here too;
     }
 
+    /*
     get title() {
         return this._title;
     }
@@ -45,4 +46,5 @@ export default class Task {
     get id() {
         return this._id;
     }
+    */
 }

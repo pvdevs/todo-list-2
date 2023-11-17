@@ -6,5 +6,4 @@ import { openAddNewTaskForm } from './addTasks/AddNewTaskSection';
 
 //newTaskForm();
 
-
 //const teste = new Task('t','d','date','pri');

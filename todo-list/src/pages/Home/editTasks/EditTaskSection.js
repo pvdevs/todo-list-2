@@ -31,7 +31,7 @@ export function updateTaskDisplay(id) {
     const task = findTask(id);
     
     clearTaskSection(id);
-    displayEditedTask(task.id, task.title, task.description, task.id, task.priority);
+    displayEditedTask(task.id, task.title, task.description, task.date, task.priority);
 }
 
 // Section Behavior
@@ -45,7 +45,7 @@ export function cancelForm(id) {
     const task = findTask(id);
 
     clearTaskSection(id);
-    displayEditedTask(task.id, task.title, task.description, task.id, task.priority);
+    displayEditedTask(task.id, task.title, task.description, task.date, task.priority);
 }
 
 // getTaskInfo
