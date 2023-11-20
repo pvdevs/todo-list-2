@@ -3,6 +3,6 @@ import { getAllTasks } from './TasksTable';
 
 getAllTasks();
 
-//newTaskForm();
+//newTaskForm();;
 
 //const teste = new Task('t','d','date','pri');
