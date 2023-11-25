@@ -21,19 +21,53 @@ body {
     grid-template-columns: 320px 1fr;
 }
 
+/* -- Nav */
+
 #nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     height: 100%;
     background-color: #F4F5F7;
     border-right: 1px solid #D6D7D9;
+    padding: 16px;
 }
+
+#nav-separation-line {
+    height: 1px;
+    width: 100%;
+    background-color: #D6D7D9;
+}
+
+#nav-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#nav-bottom-title h2{
+    font-size: 24px;
+    color: #383A40;
+}
+
+#nav-projects-list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.project-example{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* -- Page or Project Containers */
 
 #page-container {
     height: 100%;
     background-color: #FFFFFF;
     padding: 0 48px;
 }
-
-/* -- Page or Project Containers */
 
 #page-header {
     display: grid;
