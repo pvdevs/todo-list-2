@@ -4,18 +4,18 @@ import findTargetId from "../../FindId";
 import saveBtnEvent from "./SaveBtn";
 
 export default function editTask(e) {
-    const id = findTargetId(e);
+  const id = findTargetId(e);
 
-    // Check if there is a form open alredy and close it if its the case
+  // Check if there is a form open alredy and close it if its the case
 
-    //Open form id
-    openForm(id);
+  //Open form id
+  openForm(id);
 
-    // Cancel Listener
-    const cancelBtn = document.getElementById('task-edit-cancel-button');
-    cancelBtn.addEventListener('click', e => cancelBtnEvent(e));
+  // Cancel Listener
+  const cancelBtn = document.getElementById("task-edit-cancel-button");
+  cancelBtn.addEventListener("click", (e) => cancelBtnEvent(e));
 
-    // Save Listener
-    const saveBtn = document.getElementById('task-edit-save-button')
-    saveBtn.addEventListener('click', e => saveBtnEvent(e));
+  // Save Listener
+  const saveBtn = document.getElementById("task-edit-save-button");
+  saveBtn.addEventListener("click", (e) => saveBtnEvent(e));
 }

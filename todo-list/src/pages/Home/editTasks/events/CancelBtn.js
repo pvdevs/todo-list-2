@@ -2,8 +2,8 @@ import findTargetId from "../../FindId";
 import { cancelForm } from "../EditTaskSection";
 
 export default function cancelBtnEvent(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    cancelForm(findTargetId(e));
-    console.log('cancel');
+  cancelForm(findTargetId(e));
+  console.log("cancel");
 }
