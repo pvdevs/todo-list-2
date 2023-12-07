@@ -14,7 +14,6 @@ export default function addTaskBtnEvent(e) {
 
   // Cancel Listener
   const cancelBtn = document.getElementById("task-edit-cancel-button");
-
   cancelBtn.addEventListener("click", (e) => cancelBtnEvent(e));
 
   // Save Listener

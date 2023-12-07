@@ -34,7 +34,30 @@
             </div>
             <button id="add-new-project">+ New Project</button>
             <dialog id="add-new-project-dialog">
-              
+              <div id="add-new-project-modal-content">
+                <div id="add-new-project-modal-content-top">
+                  <h2>New Project</h2>
+                </div>
+                <div class="horizontal-line"></div> 
+                <div id="add-new-project-modal-content-bottom">
+                  <form method="dialog" id="dialog-form">
+                    
+                    <div class="add-new-project-input-section" id="add-new-project-title-section">
+                      <label for="project-title-input">Project Title</label>
+                      <input type="text" class="form-input" id="project-title-input">
+                    </div>
+
+                    <div class="add-new-project-input-section" id="add-new-project-desc-section">
+                      <label for="project-desc-input">Project Description</label>
+                      <textarea type="text" class="form-input" id="project-desc-input"></textarea>
+                    </div>
+
+                    <div class="modal-form-buttons">
+                      <button class="cancel-button" id="project-cancel-btn">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </dialog>
           </div>
         </div>

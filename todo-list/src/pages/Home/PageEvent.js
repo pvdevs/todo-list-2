@@ -1,4 +1,6 @@
 import { checkIfFormExists } from "./CheckExistentForm";
+import addProjectModalEvent from "./Projects/addProject/events/AddNewProjectEvent";
+import closeModal from "./Projects/addProject/events/CloseModal";
 import openModal from "./Projects/addProject/events/OpenModal";
 import addTaskBtnEvent from "./addTasks/events/AddTaskBtnEvent";
 import { doneTaskEvent } from "./doneTask/events/doneTaskEvent";
@@ -29,7 +31,10 @@ function documentEventListener(e) {
   if (e.target.classList.contains("task-done-button")) doneTaskEvent(e);
 
   // Add New Project
+
   if (e.target.id === 'add-new-project'){
-      openModal();
+      console.log('ok');
+      addProjectModalEvent(e);
   }
+
 }
